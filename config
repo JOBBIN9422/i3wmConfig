@@ -11,9 +11,8 @@
 
 #display random wallpaper from folder 
 #exec_always --no-startup-id feh --bg-scale --randomize /home/jaubin9422/Pictures/Wallpapers/*
-exec_always --no-startup-id feh --bg-scale /home/jaubin9422/Pictures/Wallpapers/bmyWm0p.png
-#exec_always --no-startup-id feh --bg-scale /home/jaubin9422/Pictures/Wallpapers/jc.png
-#exec_always --no-startup-id feh --bg-scale /home/jaubin9422/Pictures/Wallpapers/cyka.jpeg
+#exec_always --no-startup-id feh --bg-scale /home/jaubin9422/Pictures/Wallpapers/bmyWm0p.png
+exec_always --no-startup-id feh --bg-scale --randomize /home/jaubin9422/Pictures/Wallpapers/vapor/*
 
 #start network manager applet
 exec_always --no-startup-id nm-applet
@@ -199,13 +198,19 @@ bindsym $mod+Tab mode "execute"
 bar {
         font pango:Terminus Bold 10	
 
-		colors {
-			background #000000
-		}
-
         status_command i3status
         tray_output primary
         position top
+
+        colors {
+            background         #002222
+            separator          #00aaaa
+
+            focused_workspace  #00cccc #00aaaa #ffffff
+            active_workspace   #005555 #003333 #ffffff
+            inactive_workspace #005555 #003333 #888888
+            urgent_workspace   #bc00bc #ff3fff #ffffff
+        }
 }
 
 # **STYLE SETTINGS (comment section out for default colors)
@@ -213,12 +218,10 @@ new_window normal 1
 new_float normal 1
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #00cccc #00aaaa #ffffff #2e9ef4   #004444
+client.focused_inactive #007777 #005555 #ffffff #484e50   #003333
+client.unfocused        #005555 #003333 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
- #56737a
